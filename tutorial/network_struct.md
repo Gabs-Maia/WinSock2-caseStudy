@@ -10,8 +10,7 @@ In this form of network communication, TCP, we'll be using IP addresses, clients
 
 ### 📜 DEFINING OUR SCOPE:
 
-After creating our header file we'll need to define what we want to use later. For this we use the pre processor `#define`. We do this in order to define, externaly, different data types we'll be using throughout our server program. 
-It is important however to check it our declaration was already declared.
+After creating our header file, we'll need to define the necessary data types for our project. These types will be used a lot throughout the project.
 
 ```C
 #ifndef NETWORK_STRUCT_H
@@ -21,16 +20,10 @@ It is important however to check it our declaration was already declared.
 #include <winsock2.h>
 ```
 
- - `stdint.h`: A standart library; defines fixed-width integers like `uint8_t` and `uint16_t`.
+- `stdint.h`: A standard library that defines fixed-width integers like `uint8_t` and `uint16_t`.
+- `winsock2.h`: Windows socket programming API functions (a package with a bunch of functions).
 
- - `winsock2.h`: Windows socket programming API functions... (a package with a bunch of functions).
-
-The two statements above are the libraries will need for now. The second one is the API provided by windows.
-
-The procedures needed to run a server in C, in our application, won't work outside of windows. This means that for each OS we'll need to implement our own. 
-
-
-The windows API is called WinSock2. 📂
+The two libraries mentioned above are all we'll need for now. The second one is the API provided by Windows. The procedures needed to run a server in C for our application won't work outside of Windows. This means that for each OS, we'll need to implement our own solution. The Windows API is called WinSock2.📂
 <br><br>
 
 
